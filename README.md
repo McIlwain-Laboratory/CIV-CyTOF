@@ -26,7 +26,7 @@ Description: This script produces two different dataframes of p-values. Similar 
 
 Script #6: CIV_alluvial_plots_V5.R (for Fig 3A)
 
-Description: Generates alluvial plots to visualize the distribution of cell populations across tissue types, vaccine groups, and stimulations. Filters for stimulation "P," calculates mean frequencies, and corrects values for nested cell populations (e.g., B cells, CD4T, CD8T). The corrected data is then used to produce an alluvial plot, where flow represents the mean frequencies, scaled and color-coded by tissue type, vaccine group, and cell population.
+Description: Generates alluvial plots to visualize the distribution of cell populations across tissue types, vaccine groups, and stimulations. Filters for stimulation "U," calculates mean frequencies, and corrects values for nested cell populations (e.g., B cells, CD4T, CD8T). The corrected data is then used to produce an alluvial plot, where flow represents the mean frequencies, scaled and color-coded by tissue type, vaccine group, and cell population.
 
 Script #7: CIV_comp_bw_tissues_freq_V6 (for Fig 3B)
 
@@ -52,7 +52,7 @@ Script #12: CIV_dataframe_merger.R (for table)
 
 Description: This takes the csv files from script #2 (CIV_abund_plots_V5.R) and the csv files from script #4 (CIV_marker_p_vals_V2.R) and combines them into two dataframes. One for frequency p-values and one for marker p-values. The combined dataframes are written as CSVs in the main file.
 
-Script #13: CIV_Heatmap_Correlations.R (for Fig 5C,D)
+Script #13: CIV_Heatmap_Correlations.R (for Figure S3)
 
 Description: This uses the previously made files from the correlation plots to create heatmaps. Heatmaps show the R-value for the correlation and are shaded by significance (p<0.05 are cross-hatched). It prints two PDFs. One for the frequency data and one for the marker data.
 
