@@ -13,7 +13,7 @@ library(readr)
 # This code is built to be plug-and-play. Please edit the parameters below and run.
 
 # set the working directory to the folder where this analysis will take place
-setwd("Replace me")
+setwd("/Users/cameronmeikle/Desktop/UNR_RA_position/Projects/CIV/CIV R Analysis 26July24")
 
 #------------------- Do not edit past this point ----
 
@@ -26,7 +26,7 @@ comb_file_path <- file.path(getwd(), preproc_folder_name, "combined_preprocessed
 comb_cleaned_data <- read.csv(comb_file_path)
 comb_cleaned_data <- comb_cleaned_data %>% filter(reagent == "frequency")
 comb_cleaned_data <- comb_cleaned_data %>% select(-reagent, -X)
-comb_cleaned_data <- comb_cleaned_data %>% filter(stimulation == "P") #filter for only stim P
+comb_cleaned_data <- comb_cleaned_data %>% filter(stimulation == "U") #filter for only stim P
 file_name <- "comb_data_for_alluvial.csv"
 combi_file_path <- file.path(getwd(), preproc_folder_name, file_name)
 write.csv(comb_cleaned_data, combi_file_path, row.names = FALSE)
@@ -111,7 +111,7 @@ alluv_plot <- ggplot(data = mean_data,
   ylab("Frequency") +
   guides(fill = "none")
 
-file_name <- "alluvial_stim_P.svg" 
+file_name <- "alluvial_stim_U.svg" 
 alluv_plot_path <- file.path(getwd(),"output/cell_abundance/alluvial_plots", file_name)
 ggsave(alluv_plot_path, plot = alluv_plot)
 
