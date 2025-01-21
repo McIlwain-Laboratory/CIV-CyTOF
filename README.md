@@ -44,9 +44,9 @@ Script #10: CIV_correl_plots_freq_V3.R  (for Fig 5A)
 
 Description: Uses raw data from Cell Engine and frequency p-values (specifically the ANOVA p-value) from Table S2. Script merges these two based on sampleID and selects the top 10 populations that have the best p-value hits. Then, it reads in metadata and makes plots for the following: pathology score vs freq of significant pop, cov rna scores vs freq of significant pop, radiography scores from day0 to day7 vs freq of significant pop, and radiography scores from day7 vs freq of significant pop. P values reflect the p value of the correlation, adjusted for mult hypothesis with BH correction. Creates csv output with all R and p values.
 
-Script #11: CIV_correl_plots_marker_V2.R  (for Fig 5B)
+Script #11: CIV_correl_plots_marker_V4.R  (for Fig 5B)
 
-Description: Uses top three statistical hits by ANOVA for cell pop-phospho marker pair for every tissue-stim pair (as previously determined in script #11), corrects for mult hypothesis testing for 3 hypotheses by BH correction. Correlation test is conducted between given cell pop-marker pair’s marker intensities and given metadata scores, correlation coefficient R and p value of correlation is calculated and adjusted for mult hypothesis with BH correction. The correlation is plotted. CSV’s are created with R value and adjusted p value. Note: Variables at the top of script need to be adjusted for which tissue and which stim to run the script for.
+Description: Uses top three statistical hits by ANOVA for cell pop-phospho marker pair for every tissue-stim pair (as previously determined in script #11), corrects for mult hypothesis testing for 10 hypotheses by BH correction - 3 hits by 4 tissue-stim pairs minus 2 redundancies = 10 tests. Correlation test is conducted between given cell pop-marker pair’s marker intensities and given metadata scores, correlation coefficient R and p value of correlation is calculated and adjusted for mult hypothesis with BH correction. The correlation is plotted. CSV’s are created with R value and adjusted p value. Note: Variables at the top of script need to be adjusted for which tissue and which stim to run the script for.
 
 Script #12: CIV_dataframe_merger.R (for table)
 
